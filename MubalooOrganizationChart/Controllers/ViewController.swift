@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  MubalooOrganizationChart
 //
-//  Created by Joao Carreira on 05/08/16.
+//  Created by João Carreira on 05/08/16.
 //  Copyright © 2016 João Carreira. All rights reserved.
 //
 
@@ -19,7 +19,4 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-

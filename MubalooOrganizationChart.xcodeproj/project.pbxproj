@@ -8,20 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		62D24D261D549FB400A5AD08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D24D251D549FB400A5AD08 /* AppDelegate.swift */; };
-		62D24D281D549FB400A5AD08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D24D271D549FB400A5AD08 /* ViewController.swift */; };
-		62D24D2B1D549FB400A5AD08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D291D549FB400A5AD08 /* Main.storyboard */; };
-		62D24D2D1D549FB400A5AD08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D2C1D549FB400A5AD08 /* Assets.xcassets */; };
-		62D24D301D549FB400A5AD08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D2E1D549FB400A5AD08 /* LaunchScreen.storyboard */; };
+		62D24D3B1D54A16300A5AD08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D24D3A1D54A16300A5AD08 /* ViewController.swift */; };
+		62D24D401D54A19500A5AD08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D3C1D54A19500A5AD08 /* LaunchScreen.storyboard */; };
+		62D24D411D54A19500A5AD08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D3E1D54A19500A5AD08 /* Main.storyboard */; };
+		62D24D451D54A1E300A5AD08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D431D54A1E300A5AD08 /* Assets.xcassets */; };
+		62D24D461D54A1E300A5AD08 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D441D54A1E300A5AD08 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		62D24D221D549FB400A5AD08 /* MubalooOrganizationChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MubalooOrganizationChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D24D251D549FB400A5AD08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		62D24D271D549FB400A5AD08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		62D24D2A1D549FB400A5AD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		62D24D2C1D549FB400A5AD08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		62D24D2F1D549FB400A5AD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		62D24D311D549FB400A5AD08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62D24D3A1D54A16300A5AD08 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
+		62D24D3D1D54A19500A5AD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		62D24D3F1D54A19500A5AD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		62D24D431D54A1E300A5AD08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		62D24D441D54A1E300A5AD08 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +56,45 @@
 			isa = PBXGroup;
 			children = (
 				62D24D251D549FB400A5AD08 /* AppDelegate.swift */,
-				62D24D271D549FB400A5AD08 /* ViewController.swift */,
-				62D24D291D549FB400A5AD08 /* Main.storyboard */,
-				62D24D2C1D549FB400A5AD08 /* Assets.xcassets */,
-				62D24D2E1D549FB400A5AD08 /* LaunchScreen.storyboard */,
-				62D24D311D549FB400A5AD08 /* Info.plist */,
+				62D24D371D54A12700A5AD08 /* Models */,
+				62D24D381D54A12D00A5AD08 /* Views */,
+				62D24D391D54A13300A5AD08 /* Controllers */,
+				62D24D421D54A1D500A5AD08 /* Resources */,
 			);
 			path = MubalooOrganizationChart;
+			sourceTree = "<group>";
+		};
+		62D24D371D54A12700A5AD08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		62D24D381D54A12D00A5AD08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62D24D3E1D54A19500A5AD08 /* Main.storyboard */,
+				62D24D3C1D54A19500A5AD08 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		62D24D391D54A13300A5AD08 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				62D24D3A1D54A16300A5AD08 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		62D24D421D54A1D500A5AD08 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				62D24D431D54A1E300A5AD08 /* Assets.xcassets */,
+				62D24D441D54A1E300A5AD08 /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +155,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62D24D301D549FB400A5AD08 /* LaunchScreen.storyboard in Resources */,
-				62D24D2D1D549FB400A5AD08 /* Assets.xcassets in Resources */,
-				62D24D2B1D549FB400A5AD08 /* Main.storyboard in Resources */,
+				62D24D461D54A1E300A5AD08 /* Info.plist in Resources */,
+				62D24D411D54A19500A5AD08 /* Main.storyboard in Resources */,
+				62D24D451D54A1E300A5AD08 /* Assets.xcassets in Resources */,
+				62D24D401D54A19500A5AD08 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62D24D281D549FB400A5AD08 /* ViewController.swift in Sources */,
+				62D24D3B1D54A16300A5AD08 /* ViewController.swift in Sources */,
 				62D24D261D549FB400A5AD08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,20 +177,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		62D24D291D549FB400A5AD08 /* Main.storyboard */ = {
+		62D24D3C1D54A19500A5AD08 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				62D24D2A1D549FB400A5AD08 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		62D24D2E1D549FB400A5AD08 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				62D24D2F1D549FB400A5AD08 /* Base */,
+				62D24D3D1D54A19500A5AD08 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		62D24D3E1D54A19500A5AD08 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62D24D3F1D54A19500A5AD08 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -251,7 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MubalooOrganizationChart/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MubalooOrganizationChart/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mubaloo.MubalooOrganizationChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -262,7 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MubalooOrganizationChart/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MubalooOrganizationChart/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mubaloo.MubalooOrganizationChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
