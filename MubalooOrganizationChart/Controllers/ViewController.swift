@@ -15,6 +15,6 @@ class ViewController: UIViewController {
 
         // TODO: test only
         let dataSource = MOCMubalooDataSource.singleton
-        dataSource.test()
+        dataSource.loadData()
     }
 }

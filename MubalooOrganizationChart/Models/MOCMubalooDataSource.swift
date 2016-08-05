@@ -11,19 +11,20 @@ import Foundation
 final class MOCMubalooDataSource: NSObject {
 
     let url = "http://developers.mub.lu/resources/team.json"
-    let ceoData: [MOCTeamMember]?
-    let teamData: [MOCTeam]?
+
+    var ceoData: MOCTeamMember?
+    var mubalooTeams: [MOCTeam]?
 
     static let singleton = MOCMubalooDataSource()
 
     private override init() {
         ceoData = nil
-        teamData = nil
+        mubalooTeams = Array()
         super.init()
         print("MOCMubalooDataSource: init")
     }
 
-    func test() {
+    func loadData() {
 
         // TODO: remove
         JCNetworkWrapper.get(NSURL(string: url)!, headers: nil, parameters: nil) { (json, error) in
@@ -32,14 +33,37 @@ final class MOCMubalooDataSource: NSObject {
 
                 for mubalooEntry in mubalooData {
 
+                    print(mubalooEntry)
+
                     guard let teamData = MOCTeam(json: mubalooEntry as! Dictionary<String, AnyObject>) else {
 
-                        print("Error getting team data")
-                        
+                        print("MOCMubalooDataSource: error getting team data")
+
                         return
                     }
 
-                    print(teamData)
+                    // if we're able to parse the teamData object then we have a team and add it to our data source object
+                    if let _ = teamData.teamName {
+
+                        self.mubalooTeams?.append(teamData)
+
+                    } else {
+
+                        // if it's not a team then we try to parse the ceo data and we add it to our data source object
+
+                        guard let teamMemberData = MOCTeamMember(json: mubalooEntry as! Dictionary<String, AnyObject>) else {
+
+                            print("MOCMubalooDataSource: error getting ceo data")
+
+                            return
+                        }
+
+                        if let _ = teamMemberData.role {
+
+                            self.ceoData = teamMemberData
+                        }
+                    }
+
                 }
             }
         }
