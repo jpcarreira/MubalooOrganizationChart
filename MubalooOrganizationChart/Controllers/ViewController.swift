@@ -17,12 +17,24 @@ class ViewController: UIViewController {
         // TODO: remove
         let url = "http://developers.mub.lu/resources/team.json"
         JCNetworkWrapper.get(NSURL(string: url)!, headers: nil, parameters: nil) { (json, error) in
-            print(json)
-        }
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+            print(json)
+
+            if let mubalooData = json as? [AnyObject] {
+
+                print(mubalooData)
+
+                for mubalooEntry in mubalooData {
+
+                    guard let teamData = MOCTeam(json: mubalooEntry as! Dictionary<String, AnyObject>) else {
+
+                        print("Error getting team data")
+                        return
+                    }
+
+                    print(teamData)
+                }
+            }
+        }
     }
 }
