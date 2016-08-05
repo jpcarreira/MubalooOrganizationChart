@@ -13,7 +13,9 @@
 		62D24D411D54A19500A5AD08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D3E1D54A19500A5AD08 /* Main.storyboard */; };
 		62D24D451D54A1E300A5AD08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D431D54A1E300A5AD08 /* Assets.xcassets */; };
 		62D24D461D54A1E300A5AD08 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D441D54A1E300A5AD08 /* Info.plist */; };
-		62D24D4C1D54D24D00A5AD08 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D24D4B1D54D24D00A5AD08 /* Reachability.swift */; };
+		62D29DB41D54D5A200A98C0F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DB31D54D5A200A98C0F /* Reachability.swift */; };
+		62D29DB71D54D5AB00A98C0F /* JCNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DB51D54D5AB00A98C0F /* JCNetworkError.swift */; };
+		62D29DB81D54D5AB00A98C0F /* JCNetworkWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DB61D54D5AB00A98C0F /* JCNetworkWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +26,9 @@
 		62D24D3F1D54A19500A5AD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62D24D431D54A1E300A5AD08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		62D24D441D54A1E300A5AD08 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
-		62D24D4B1D54D24D00A5AD08 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Helpers/Reachability.swift; sourceTree = "<group>"; };
+		62D29DB31D54D5A200A98C0F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Helpers/Reachability/Reachability.swift; sourceTree = "<group>"; };
+		62D29DB51D54D5AB00A98C0F /* JCNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCNetworkError.swift; path = Helpers/NetworkWrapper/JCNetworkError.swift; sourceTree = "<group>"; };
+		62D29DB61D54D5AB00A98C0F /* JCNetworkWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCNetworkWrapper.swift; path = Helpers/NetworkWrapper/JCNetworkWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +107,27 @@
 		62D24D4A1D54D22D00A5AD08 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				62D24D4B1D54D24D00A5AD08 /* Reachability.swift */,
+				62D29DB21D54D59000A98C0F /* NetworkWrapper */,
+				62D29DB11D54D58900A98C0F /* Reachability */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		62D29DB11D54D58900A98C0F /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				62D29DB31D54D5A200A98C0F /* Reachability.swift */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		62D29DB21D54D59000A98C0F /* NetworkWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				62D29DB51D54D5AB00A98C0F /* JCNetworkError.swift */,
+				62D29DB61D54D5AB00A98C0F /* JCNetworkWrapper.swift */,
+			);
+			name = NetworkWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +202,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D29DB71D54D5AB00A98C0F /* JCNetworkError.swift in Sources */,
 				62D24D3B1D54A16300A5AD08 /* ViewController.swift in Sources */,
+				62D29DB81D54D5AB00A98C0F /* JCNetworkWrapper.swift in Sources */,
 				62D24D261D549FB400A5AD08 /* AppDelegate.swift in Sources */,
-				62D24D4C1D54D24D00A5AD08 /* Reachability.swift in Sources */,
+				62D29DB41D54D5A200A98C0F /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
