@@ -7,20 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62D24D261D549FB400A5AD08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D24D251D549FB400A5AD08 /* AppDelegate.swift */; };
 		62D24D3B1D54A16300A5AD08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D24D3A1D54A16300A5AD08 /* ViewController.swift */; };
 		62D24D401D54A19500A5AD08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D3C1D54A19500A5AD08 /* LaunchScreen.storyboard */; };
 		62D24D411D54A19500A5AD08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D3E1D54A19500A5AD08 /* Main.storyboard */; };
 		62D24D451D54A1E300A5AD08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D431D54A1E300A5AD08 /* Assets.xcassets */; };
-		62D24D461D54A1E300A5AD08 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D441D54A1E300A5AD08 /* Info.plist */; };
 		62D29DB41D54D5A200A98C0F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DB31D54D5A200A98C0F /* Reachability.swift */; };
 		62D29DB71D54D5AB00A98C0F /* JCNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DB51D54D5AB00A98C0F /* JCNetworkError.swift */; };
 		62D29DB81D54D5AB00A98C0F /* JCNetworkWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DB61D54D5AB00A98C0F /* JCNetworkWrapper.swift */; };
+		62D29DBA1D54E5E600A98C0F /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D29DB91D54E5E600A98C0F /* Gloss.framework */; };
+		62D29DC41D553ACA00A98C0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DC31D553ACA00A98C0F /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		62D24D221D549FB400A5AD08 /* MubalooOrganizationChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MubalooOrganizationChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		62D24D251D549FB400A5AD08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62D24D3A1D54A16300A5AD08 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
 		62D24D3D1D54A19500A5AD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62D24D3F1D54A19500A5AD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,6 +28,8 @@
 		62D29DB31D54D5A200A98C0F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Helpers/Reachability/Reachability.swift; sourceTree = "<group>"; };
 		62D29DB51D54D5AB00A98C0F /* JCNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCNetworkError.swift; path = Helpers/NetworkWrapper/JCNetworkError.swift; sourceTree = "<group>"; };
 		62D29DB61D54D5AB00A98C0F /* JCNetworkWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCNetworkWrapper.swift; path = Helpers/NetworkWrapper/JCNetworkWrapper.swift; sourceTree = "<group>"; };
+		62D29DB91D54E5E600A98C0F /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = ../Carthage/Build/iOS/Gloss.framework; sourceTree = "<group>"; };
+		62D29DC31D553ACA00A98C0F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Utils/AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D29DBA1D54E5E600A98C0F /* Gloss.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,12 +63,13 @@
 		62D24D241D549FB400A5AD08 /* MubalooOrganizationChart */ = {
 			isa = PBXGroup;
 			children = (
-				62D24D251D549FB400A5AD08 /* AppDelegate.swift */,
 				62D24D371D54A12700A5AD08 /* Models */,
 				62D24D381D54A12D00A5AD08 /* Views */,
 				62D24D391D54A13300A5AD08 /* Controllers */,
 				62D24D4A1D54D22D00A5AD08 /* Helpers */,
 				62D24D421D54A1D500A5AD08 /* Resources */,
+				62D29DC21D553A7D00A98C0F /* Utils */,
+				62D29DBC1D54E8CB00A98C0F /* Vendor */,
 			);
 			path = MubalooOrganizationChart;
 			sourceTree = "<group>";
@@ -130,6 +133,22 @@
 			name = NetworkWrapper;
 			sourceTree = "<group>";
 		};
+		62D29DBC1D54E8CB00A98C0F /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				62D29DB91D54E5E600A98C0F /* Gloss.framework */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		62D29DC21D553A7D00A98C0F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				62D29DC31D553ACA00A98C0F /* AppDelegate.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +159,7 @@
 				62D24D1E1D549FB400A5AD08 /* Sources */,
 				62D24D1F1D549FB400A5AD08 /* Frameworks */,
 				62D24D201D549FB400A5AD08 /* Resources */,
+				62D29DBB1D54E88000A98C0F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -188,7 +208,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62D24D461D54A1E300A5AD08 /* Info.plist in Resources */,
 				62D24D411D54A19500A5AD08 /* Main.storyboard in Resources */,
 				62D24D451D54A1E300A5AD08 /* Assets.xcassets in Resources */,
 				62D24D401D54A19500A5AD08 /* LaunchScreen.storyboard in Resources */,
@@ -196,6 +215,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62D29DBB1D54E88000A98C0F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Gloss.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		62D24D1E1D549FB400A5AD08 /* Sources */ = {
@@ -205,7 +241,7 @@
 				62D29DB71D54D5AB00A98C0F /* JCNetworkError.swift in Sources */,
 				62D24D3B1D54A16300A5AD08 /* ViewController.swift in Sources */,
 				62D29DB81D54D5AB00A98C0F /* JCNetworkWrapper.swift in Sources */,
-				62D24D261D549FB400A5AD08 /* AppDelegate.swift in Sources */,
+				62D29DC41D553ACA00A98C0F /* AppDelegate.swift in Sources */,
 				62D29DB41D54D5A200A98C0F /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +357,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MubalooOrganizationChart/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mubaloo.MubalooOrganizationChart;
@@ -332,6 +372,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MubalooOrganizationChart/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mubaloo.MubalooOrganizationChart;
