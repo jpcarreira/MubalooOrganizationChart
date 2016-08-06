@@ -18,10 +18,12 @@ final class MOCMubalooDataSource: NSObject {
     static let singleton = MOCMubalooDataSource()
 
     private override init() {
-        ceoData = nil
+
+        print("MOCMubalooDataSource: init")
+
         mubalooTeams = Array()
         super.init()
-        print("MOCMubalooDataSource: init")
+
     }
 
     func loadData() {
@@ -29,42 +31,50 @@ final class MOCMubalooDataSource: NSObject {
         // TODO: remove
         JCNetworkWrapper.get(NSURL(string: url)!, headers: nil, parameters: nil) { (json, error) in
 
-            if let mubalooData = json as? [AnyObject] {
+            if error == nil {
 
-                for mubalooEntry in mubalooData {
+                print("MOCMubalooDataSource: data fetch OK")
 
-                    print(mubalooEntry)
+                if let mubalooData = json as? [AnyObject] {
 
-                    guard let teamData = MOCTeam(json: mubalooEntry as! Dictionary<String, AnyObject>) else {
+                    for mubalooEntry in mubalooData {
 
-                        print("MOCMubalooDataSource: error getting team data")
+                        print(mubalooEntry)
 
-                        return
-                    }
+                        guard let teamData = MOCTeam(json: mubalooEntry as! Dictionary<String, AnyObject>) else {
 
-                    // if we're able to parse the teamData object then we have a team and add it to our data source object
-                    if let _ = teamData.teamName {
-
-                        self.mubalooTeams?.append(teamData)
-
-                    } else {
-
-                        // if it's not a team then we try to parse the ceo data and we add it to our data source object
-
-                        guard let teamMemberData = MOCTeamMember(json: mubalooEntry as! Dictionary<String, AnyObject>) else {
-
-                            print("MOCMubalooDataSource: error getting ceo data")
+                            print("MOCMubalooDataSource: error getting team data")
 
                             return
                         }
 
-                        if let _ = teamMemberData.role {
+                        // if we're able to parse the teamData object then we have a team and add it to our data source object
+                        if let _ = teamData.teamName {
 
-                            self.ceoData = teamMemberData
+                            self.mubalooTeams?.append(teamData)
+
+                        } else {
+
+                            // if it's not a team then we try to parse the ceo data and we add it to our data source object
+
+                            guard let teamMemberData = MOCTeamMember(json: mubalooEntry as! Dictionary<String, AnyObject>) else {
+
+                                print("MOCMubalooDataSource: error getting ceo data")
+                                
+                                return
+                            }
+                            
+                            if let _ = teamMemberData.role {
+                                
+                                self.ceoData = teamMemberData
+                            }
                         }
                     }
-
                 }
+            } else {
+
+                print("MOCMubalooDataSource: data fetch error")
+
             }
         }
     }
