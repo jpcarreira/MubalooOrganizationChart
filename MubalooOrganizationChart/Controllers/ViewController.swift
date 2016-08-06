@@ -15,9 +15,5 @@ class ViewController: UIViewController {
 
         // TODO: test only
         let mubalooDataSource = MOCMubalooDataSource.singleton
-        mubalooDataSource.reloadDataSourceData { _ in
-
-
-        }
     }
 }

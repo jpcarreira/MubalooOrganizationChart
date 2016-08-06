@@ -39,30 +39,38 @@ final class MOCMubalooDataSource: NSObject {
         }
     }
 
-    func reloadDataSourceData(completionHandler: Bool -> Void) {
+    func reloadDataSourceDataWithForceReload(forceReload: Bool, completionHandler: Bool -> Void) {
 
-        if Reachability.isConnectedToNetwork() {
+        if forceReload || ceoData == nil || mubalooTeams == nil {
 
-            getMubalooData({ success in
+            if Reachability.isConnectedToNetwork() {
 
-                if success {
+                getMubalooData({ success in
 
-                    print("MOCMubalooDataSource: data reload OK")
+                    if success {
 
-                    completionHandler(true)
+                        print("MOCMubalooDataSource: data reload OK")
 
-                } else {
+                        completionHandler(true)
 
-                    print("MOCMubalooDataSource: data reload NOK")
+                    } else {
 
-                    completionHandler(false)
+                        print("MOCMubalooDataSource: data reload NOK")
 
-                }
-            })
+                        completionHandler(false)
+                        
+                    }
+                })
+                
+            } else {
+                
+                print("MOCMubalooDataSource: data reload NOK due to no internet connection")
+                
+            }
 
         } else {
 
-            print("MOCMubalooDataSource: data reload NOK due to no internet connection")
+            print("MOCMubalooDataSource: no need to reload, data already cached")
 
         }
     }
@@ -118,6 +126,7 @@ final class MOCMubalooDataSource: NSObject {
                     completionHandler(true)
 
                 }
+
             } else {
 
                 print("MOCMubalooDataSource: data fetch error")
