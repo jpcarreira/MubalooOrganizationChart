@@ -16,9 +16,9 @@
 		62D29DB81D54D5AB00A98C0F /* JCNetworkWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DB61D54D5AB00A98C0F /* JCNetworkWrapper.swift */; };
 		62D29DBA1D54E5E600A98C0F /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D29DB91D54E5E600A98C0F /* Gloss.framework */; };
 		62D29DC41D553ACA00A98C0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DC31D553ACA00A98C0F /* AppDelegate.swift */; };
-		62D29DC81D553FD900A98C0F /* MOCTeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DC71D553FD900A98C0F /* MOCTeamMember.swift */; };
-		62D29DCA1D5541EE00A98C0F /* MOCTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DC91D5541EE00A98C0F /* MOCTeam.swift */; };
 		62D29DCC1D55449900A98C0F /* MOCMubalooDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DCB1D55449900A98C0F /* MOCMubalooDataSource.swift */; };
+		62D29DD01D5630D200A98C0F /* MOCTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DCE1D5630D200A98C0F /* MOCTeam.swift */; };
+		62D29DD11D5630D200A98C0F /* MOCTeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DCF1D5630D200A98C0F /* MOCTeamMember.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +33,9 @@
 		62D29DB61D54D5AB00A98C0F /* JCNetworkWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCNetworkWrapper.swift; path = Helpers/NetworkWrapper/JCNetworkWrapper.swift; sourceTree = "<group>"; };
 		62D29DB91D54E5E600A98C0F /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = ../Carthage/Build/iOS/Gloss.framework; sourceTree = "<group>"; };
 		62D29DC31D553ACA00A98C0F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Utils/AppDelegate.swift; sourceTree = "<group>"; };
-		62D29DC71D553FD900A98C0F /* MOCTeamMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMember.swift; path = Models/MOCTeamMember.swift; sourceTree = "<group>"; };
-		62D29DC91D5541EE00A98C0F /* MOCTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeam.swift; path = Models/MOCTeam.swift; sourceTree = "<group>"; };
 		62D29DCB1D55449900A98C0F /* MOCMubalooDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCMubalooDataSource.swift; path = Models/MOCMubalooDataSource.swift; sourceTree = "<group>"; };
+		62D29DCE1D5630D200A98C0F /* MOCTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeam.swift; path = Models/Entitities/MOCTeam.swift; sourceTree = "<group>"; };
+		62D29DCF1D5630D200A98C0F /* MOCTeamMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMember.swift; path = Models/Entitities/MOCTeamMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,7 @@
 		62D24D371D54A12700A5AD08 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				62D29DC71D553FD900A98C0F /* MOCTeamMember.swift */,
-				62D29DC91D5541EE00A98C0F /* MOCTeam.swift */,
+				62D29DCD1D5630AE00A98C0F /* Entities */,
 				62D29DCB1D55449900A98C0F /* MOCMubalooDataSource.swift */,
 			);
 			name = Models;
@@ -156,6 +155,15 @@
 				62D29DC31D553ACA00A98C0F /* AppDelegate.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		62D29DCD1D5630AE00A98C0F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				62D29DCE1D5630D200A98C0F /* MOCTeam.swift */,
+				62D29DCF1D5630D200A98C0F /* MOCTeamMember.swift */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,11 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62D29DCA1D5541EE00A98C0F /* MOCTeam.swift in Sources */,
+				62D29DD01D5630D200A98C0F /* MOCTeam.swift in Sources */,
 				62D29DB71D54D5AB00A98C0F /* JCNetworkError.swift in Sources */,
 				62D29DCC1D55449900A98C0F /* MOCMubalooDataSource.swift in Sources */,
 				62D24D3B1D54A16300A5AD08 /* ViewController.swift in Sources */,
-				62D29DC81D553FD900A98C0F /* MOCTeamMember.swift in Sources */,
+				62D29DD11D5630D200A98C0F /* MOCTeamMember.swift in Sources */,
 				62D29DB81D54D5AB00A98C0F /* JCNetworkWrapper.swift in Sources */,
 				62D29DC41D553ACA00A98C0F /* AppDelegate.swift in Sources */,
 				62D29DB41D54D5A200A98C0F /* Reachability.swift in Sources */,
