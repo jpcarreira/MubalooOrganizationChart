@@ -39,6 +39,34 @@ final class MOCMubalooDataSource: NSObject {
         }
     }
 
+    func reloadDataSourceData(completionHandler: Bool -> Void) {
+
+        if Reachability.isConnectedToNetwork() {
+
+            getMubalooData({ success in
+
+                if success {
+
+                    print("MOCMubalooDataSource: data reload OK")
+
+                    completionHandler(true)
+
+                } else {
+
+                    print("MOCMubalooDataSource: data reload NOK")
+
+                    completionHandler(false)
+
+                }
+            })
+
+        } else {
+
+            print("MOCMubalooDataSource: data reload NOK due to no internet connection")
+
+        }
+    }
+
     private func getMubalooData(completionHandler: Bool -> Void) {
 
         JCNetworkWrapper.get(NSURL(string: url)!, headers: nil, parameters: nil) { (json, error) in

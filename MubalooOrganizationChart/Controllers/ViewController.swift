@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // TODO: test only
-        let _ = MOCMubalooDataSource.singleton
+        let mubalooDataSource = MOCMubalooDataSource.singleton
+        mubalooDataSource.reloadDataSourceData { _ in
+
+
+        }
     }
 }
