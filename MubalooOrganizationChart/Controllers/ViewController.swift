@@ -14,7 +14,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // TODO: test only
-        let dataSource = MOCMubalooDataSource.singleton
-        dataSource.loadData()
+        let _ = MOCMubalooDataSource.singleton
     }
 }

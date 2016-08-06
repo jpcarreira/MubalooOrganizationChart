@@ -21,14 +21,26 @@ final class MOCMubalooDataSource: NSObject {
 
         print("MOCMubalooDataSource: init")
 
-        mubalooTeams = Array()
         super.init()
 
+        mubalooTeams = Array()
+
+        getMubalooData { success in
+
+            if success {
+
+                print("MOCMubalooDataSource: singeton initialized with mubaloo data")
+
+            } else {
+
+                print("MOCMubalooDataSource: singletion initialzied without mubaloo data")
+
+            }
+        }
     }
 
-    func loadData() {
+    private func getMubalooData(completionHandler: Bool -> Void) {
 
-        // TODO: remove
         JCNetworkWrapper.get(NSURL(string: url)!, headers: nil, parameters: nil) { (json, error) in
 
             if error == nil {
@@ -39,11 +51,13 @@ final class MOCMubalooDataSource: NSObject {
 
                     for mubalooEntry in mubalooData {
 
-                        print(mubalooEntry)
+//                        print(mubalooEntry)
 
                         guard let teamData = MOCTeam(json: mubalooEntry as! Dictionary<String, AnyObject>) else {
 
                             print("MOCMubalooDataSource: error getting team data")
+
+                            completionHandler(false)
 
                             return
                         }
@@ -60,6 +74,8 @@ final class MOCMubalooDataSource: NSObject {
                             guard let teamMemberData = MOCTeamMember(json: mubalooEntry as! Dictionary<String, AnyObject>) else {
 
                                 print("MOCMubalooDataSource: error getting ceo data")
+
+                                completionHandler(false)
                                 
                                 return
                             }
@@ -70,11 +86,15 @@ final class MOCMubalooDataSource: NSObject {
                             }
                         }
                     }
+
+                    completionHandler(true)
+
                 }
             } else {
 
                 print("MOCMubalooDataSource: data fetch error")
 
+                completionHandler(false)
             }
         }
     }
