@@ -11,7 +11,14 @@ import UIKit
 class MOCTeamsTableViewController: UITableViewController {
 
     // a reference to our data source
-    private let mubalooDataSource = MOCMubalooDataSource.singleton
+    private var mubalooDataSource: MOCMubalooDataSource
+
+    required init?(coder aDecoder: NSCoder) {
+
+        mubalooDataSource = MOCMubalooDataSource.singleton
+
+        super.init(coder: aDecoder)
+    }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 

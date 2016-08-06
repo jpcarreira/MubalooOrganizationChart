@@ -12,8 +12,8 @@ final class MOCMubalooDataSource: NSObject {
 
     let url = "http://developers.mub.lu/resources/team.json"
 
-    var ceoData: MOCTeamMember?
-    var mubalooTeams: [MOCTeam]?
+    private var ceoData: MOCTeamMember?
+    private var mubalooTeams: [MOCTeam]?
 
     static let singleton = MOCMubalooDataSource()
 
