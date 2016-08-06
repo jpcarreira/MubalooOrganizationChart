@@ -75,6 +75,23 @@ final class MOCMubalooDataSource: NSObject {
         }
     }
 
+    func numberOfTeams() -> Int? {
+
+        return mubalooTeams?.count
+
+    }
+
+    func teamNameAtIndex(index: Int) -> String? {
+
+        if let mubalooTeam = mubalooTeams![index] as? MOCTeam {
+
+            return mubalooTeam.teamName
+
+        }
+
+        return nil
+    }
+
     private func getMubalooData(completionHandler: Bool -> Void) {
 
         JCNetworkWrapper.get(NSURL(string: url)!, headers: nil, parameters: nil) { (json, error) in

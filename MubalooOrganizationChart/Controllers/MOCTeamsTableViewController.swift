@@ -10,6 +10,9 @@ import UIKit
 
 class MOCTeamsTableViewController: UITableViewController {
 
+    // a reference to our data source
+    private let mubalooDataSource = MOCMubalooDataSource.singleton
+
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 
         return 1
@@ -18,7 +21,7 @@ class MOCTeamsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 10
+        return mubalooDataSource.numberOfTeams() ?? 0
 
     }
 
@@ -26,6 +29,9 @@ class MOCTeamsTableViewController: UITableViewController {
 
         let cell = tableView.dequeueReusableCellWithIdentifier("TeamCell", forIndexPath: indexPath)
 
+        cell.textLabel?.text = mubalooDataSource.teamNameAtIndex(indexPath.row)
+
         return cell
+
     }
 }
