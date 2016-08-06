@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62D24D3B1D54A16300A5AD08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D24D3A1D54A16300A5AD08 /* ViewController.swift */; };
 		62D24D401D54A19500A5AD08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D3C1D54A19500A5AD08 /* LaunchScreen.storyboard */; };
 		62D24D411D54A19500A5AD08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D3E1D54A19500A5AD08 /* Main.storyboard */; };
 		62D24D451D54A1E300A5AD08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D24D431D54A1E300A5AD08 /* Assets.xcassets */; };
@@ -23,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		62D24D221D549FB400A5AD08 /* MubalooOrganizationChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MubalooOrganizationChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		62D24D3A1D54A16300A5AD08 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
 		62D24D3D1D54A19500A5AD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62D24D3F1D54A19500A5AD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62D24D431D54A1E300A5AD08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 		62D24D391D54A13300A5AD08 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				62D24D3A1D54A16300A5AD08 /* ViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -258,7 +255,6 @@
 				62D29DD01D5630D200A98C0F /* MOCTeam.swift in Sources */,
 				62D29DB71D54D5AB00A98C0F /* JCNetworkError.swift in Sources */,
 				62D29DCC1D55449900A98C0F /* MOCMubalooDataSource.swift in Sources */,
-				62D24D3B1D54A16300A5AD08 /* ViewController.swift in Sources */,
 				62D29DD11D5630D200A98C0F /* MOCTeamMember.swift in Sources */,
 				62D29DB81D54D5AB00A98C0F /* JCNetworkWrapper.swift in Sources */,
 				62D29DC41D553ACA00A98C0F /* AppDelegate.swift in Sources */,
