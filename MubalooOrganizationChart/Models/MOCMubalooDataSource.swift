@@ -83,7 +83,7 @@ final class MOCMubalooDataSource: NSObject {
 
     func teamNameAtIndex(index: Int) -> String? {
 
-        if let mubalooTeam = mubalooTeams![index] as? MOCTeam {
+        if let mubalooTeam = mubalooTeams?[index] {
 
             return mubalooTeam.teamName
 
