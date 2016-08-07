@@ -36,5 +36,12 @@ struct MOCTeamMember: Decodable {
         profileImageUrl = "profileImageURL" <~~ json
 
         isTeamLead = "teamLead" <~~ json
+        
+    }
+
+    func getTeamMemberFullName() -> String {
+
+        return firstName! + " " + lastName!
+
     }
 }

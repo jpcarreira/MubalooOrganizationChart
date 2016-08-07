@@ -22,4 +22,10 @@ struct MOCTeam: Decodable {
         teamMembers = "members" <~~ json
 
     }
+
+    func teamMemberAtIndex(index: Int) -> MOCTeamMember? {
+
+        return teamMembers?[index]
+        
+    }
 }

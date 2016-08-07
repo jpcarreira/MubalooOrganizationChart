@@ -19,6 +19,15 @@ class MOCTeamMembersTableViewController: UITableViewController {
         }
     }
 
+    override func viewDidLoad() {
+
+        super.viewDidLoad()
+
+        // TODO: test only
+        teamData = MOCMubalooDataSource.singleton.teamAtIndex(0)
+        
+    }
+
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 
         return 1
@@ -35,7 +44,11 @@ class MOCTeamMembersTableViewController: UITableViewController {
 
         let cell = tableView.dequeueReusableCellWithIdentifier("TeamMemberCell", forIndexPath: indexPath)
 
-        return cell
+        let teamMember = teamData?.teamMemberAtIndex(indexPath.row)
         
+        cell.textLabel?.text = teamMember?.getTeamMemberFullName()
+
+        return cell
+
     }
 }

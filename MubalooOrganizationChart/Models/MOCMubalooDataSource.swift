@@ -37,6 +37,7 @@ final class MOCMubalooDataSource: NSObject {
 
             }
         }
+
     }
 
     func reloadDataSourceDataWithForceReload(forceReload: Bool, completionHandler: Bool -> Void) {
@@ -78,7 +79,6 @@ final class MOCMubalooDataSource: NSObject {
     func numberOfTeams() -> Int? {
 
         return mubalooTeams?.count
-
     }
 
     func teamNameAtIndex(index: Int) -> String? {
@@ -90,6 +90,12 @@ final class MOCMubalooDataSource: NSObject {
         }
 
         return nil
+    }
+
+    func teamAtIndex(index: Int) -> MOCTeam? {
+
+        return mubalooTeams?[index]
+        
     }
 
     private func getMubalooData(completionHandler: Bool -> Void) {
