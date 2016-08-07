@@ -146,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="258" y="223"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Base Split View Controller-->
         <scene sceneID="Jlq-88-Jsy">
             <objects>
-                <splitViewController id="W9P-j2-qs8" sceneMemberID="viewController">
+                <splitViewController id="W9P-j2-qs8" customClass="MOCBaseSplitViewController" customModule="MubalooOrganizationChart" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="plX-a0-nyc" kind="relationship" relationship="masterViewController" id="MCe-mT-eX0"/>
                         <segue destination="xOY-dQ-e97" kind="relationship" relationship="detailViewController" id="Oce-p2-vmJ"/>
