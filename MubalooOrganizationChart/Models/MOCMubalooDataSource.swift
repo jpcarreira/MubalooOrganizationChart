@@ -99,6 +99,12 @@ final class MOCMubalooDataSource: NSObject {
         
     }
 
+    func getCeoData() -> MOCTeamMember? {
+
+        return ceoData
+
+    }
+
     private func getMubalooData(completionHandler: Bool -> Void) {
 
         JCNetworkWrapper.get(NSURL(string: url)!, headers: nil, parameters: nil) { (json, error) in

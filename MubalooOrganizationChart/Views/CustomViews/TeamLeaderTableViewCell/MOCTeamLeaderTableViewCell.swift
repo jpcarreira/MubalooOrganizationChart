@@ -14,6 +14,8 @@ class MOCTeamLeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var teamLeaderName: UILabel!
 
+    @IBOutlet weak var teamLeaderRole: UILabel!
+
     static let cellIdentifier = "TeamLeaderCell"
 
     override func awakeFromNib() {

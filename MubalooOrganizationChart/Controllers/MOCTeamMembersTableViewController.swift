@@ -68,7 +68,10 @@ class MOCTeamMembersTableViewController: UITableViewController {
             let teamLead = teamData?.getTeamLeader()
 
             cell.teamLeaderName?.text = teamLead?.getTeamMemberFullName()
+
             cell.teamLeaderImageView.kf_setImageWithURL(NSURL(string: (teamLead?.profileImageUrl)!))
+
+            cell.teamLeaderRole?.text = teamLead?.getTeamMemberRole()
 
             return cell
 

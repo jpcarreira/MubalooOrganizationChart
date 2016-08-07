@@ -31,26 +31,62 @@ class MOCTeamsTableViewController: UITableViewController {
         super.init(coder: aDecoder)
     }
 
+    override func viewDidLoad() {
+
+        super.viewDidLoad()
+
+        tableView.registerNib(UINib(nibName: "MOCTeamLeaderTableViewCell", bundle: nil), forCellReuseIdentifier: MOCTeamLeaderTableViewCell.cellIdentifier)
+
+    }
+
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 
-        return 1
+        return 2
 
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return mubalooDataSource.numberOfTeams() ?? 0
+        if section == 0 {
 
+            return 1
+
+        } else {
+
+            return mubalooDataSource.numberOfTeams() ?? 0
+
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCellWithIdentifier("TeamCell", forIndexPath: indexPath)
+        if indexPath.section == 0 {
 
-        cell.textLabel?.text = mubalooDataSource.teamNameAtIndex(indexPath.row)
+            let cell = tableView.dequeueReusableCellWithIdentifier(MOCTeamLeaderTableViewCell.cellIdentifier, forIndexPath: indexPath) as! MOCTeamLeaderTableViewCell
 
-        return cell
+            let ceo = mubalooDataSource.getCeoData()
 
+            if let ceo = ceo {
+
+                cell.teamLeaderName?.text = ceo.getTeamMemberFullName()
+
+                cell.teamLeaderImageView?.kf_setImageWithURL(NSURL(string: ceo.profileImageUrl!))
+
+                cell.teamLeaderRole?.text = ceo.getTeamMemberRole()
+                
+            }
+
+            return cell
+
+        } else {
+
+            let cell = tableView.dequeueReusableCellWithIdentifier("TeamCell", forIndexPath: indexPath)
+
+            cell.textLabel?.text = mubalooDataSource.teamNameAtIndex(indexPath.row)
+
+            return cell
+
+        }
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -78,6 +114,19 @@ class MOCTeamsTableViewController: UITableViewController {
 
             self.splitViewController?.preferredDisplayMode = .PrimaryHidden
 
+        }
+    }
+
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+
+        if indexPath.section == 0 {
+
+            return 196
+
+        } else {
+
+            return 88.0
+            
         }
     }
 }

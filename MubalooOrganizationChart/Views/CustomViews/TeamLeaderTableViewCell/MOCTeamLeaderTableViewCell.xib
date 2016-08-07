@@ -30,7 +30,7 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP4-9r-6yY">
                         <rect key="frame" x="14" y="161" width="293" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -57,6 +57,7 @@
             <connections>
                 <outlet property="teamLeaderImageView" destination="eYr-bU-FhQ" id="X5t-er-m8E"/>
                 <outlet property="teamLeaderName" destination="LP4-9r-6yY" id="zOb-B9-C1c"/>
+                <outlet property="teamLeaderRole" destination="8zP-rx-8N5" id="h4b-XM-jGE"/>
             </connections>
             <point key="canvasLocation" x="228.5" y="347.5"/>
         </tableViewCell>
