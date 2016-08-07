@@ -19,6 +19,7 @@
 		62D29DD01D5630D200A98C0F /* MOCTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DCE1D5630D200A98C0F /* MOCTeam.swift */; };
 		62D29DD11D5630D200A98C0F /* MOCTeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DCF1D5630D200A98C0F /* MOCTeamMember.swift */; };
 		62D29DD31D56393400A98C0F /* MOCTeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DD21D56393400A98C0F /* MOCTeamsTableViewController.swift */; };
+		62D29DD51D56539E00A98C0F /* MOCTeamMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DD41D56539E00A98C0F /* MOCTeamMembersTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		62D29DCE1D5630D200A98C0F /* MOCTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeam.swift; path = Models/Entitities/MOCTeam.swift; sourceTree = "<group>"; };
 		62D29DCF1D5630D200A98C0F /* MOCTeamMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMember.swift; path = Models/Entitities/MOCTeamMember.swift; sourceTree = "<group>"; };
 		62D29DD21D56393400A98C0F /* MOCTeamsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamsTableViewController.swift; path = Controllers/MOCTeamsTableViewController.swift; sourceTree = "<group>"; };
+		62D29DD41D56539E00A98C0F /* MOCTeamMembersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMembersTableViewController.swift; path = Controllers/MOCTeamMembersTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				62D29DD21D56393400A98C0F /* MOCTeamsTableViewController.swift */,
+				62D29DD41D56539E00A98C0F /* MOCTeamMembersTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				62D29DB81D54D5AB00A98C0F /* JCNetworkWrapper.swift in Sources */,
 				62D29DC41D553ACA00A98C0F /* AppDelegate.swift in Sources */,
 				62D29DB41D54D5A200A98C0F /* Reachability.swift in Sources */,
+				62D29DD51D56539E00A98C0F /* MOCTeamMembersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

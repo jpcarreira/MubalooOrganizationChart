@@ -12,10 +12,14 @@ import Gloss
 struct MOCTeam: Decodable {
 
     let teamName: String?
+    
     let teamMembers: [MOCTeamMember]?
 
     init?(json: JSON) {
+
         teamName = "teamName" <~~ json
+
         teamMembers = "members" <~~ json
+
     }
 }
