@@ -28,6 +28,19 @@ class MOCTeamsTableViewController: UITableViewController {
 
         mubalooDataSource = MOCMubalooDataSource.singleton
 
+        mubalooDataSource.reloadDataSourceDataWithForceReload(true) { success in
+
+            if success {
+
+                print("MOCTeamsTableViewController: singeton initialized with mubaloo data")
+
+            } else {
+
+                print("MOCTeamsTableViewController: singletion initialzied without mubaloo data")
+
+            }
+        }
+
         super.init(coder: aDecoder)
     }
 
@@ -85,6 +98,19 @@ class MOCTeamsTableViewController: UITableViewController {
             cell.textLabel?.text = mubalooDataSource.teamNameAtIndex(indexPath.row)
 
             return cell
+
+        }
+    }
+
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+
+        if indexPath.section == 0 {
+
+            return nil
+
+        } else {
+
+            return indexPath
 
         }
     }

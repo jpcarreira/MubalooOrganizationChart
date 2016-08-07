@@ -25,18 +25,18 @@ final class MOCMubalooDataSource: NSObject {
 
         mubalooTeams = Array()
 
-        getMubalooData { success in
-
-            if success {
-
-                print("MOCMubalooDataSource: singeton initialized with mubaloo data")
-
-            } else {
-
-                print("MOCMubalooDataSource: singletion initialzied without mubaloo data")
-
-            }
-        }
+//        getMubalooData { success in
+//
+//            if success {
+//
+//                print("MOCMubalooDataSource: singeton initialized with mubaloo data")
+//
+//            } else {
+//
+//                print("MOCMubalooDataSource: singletion initialzied without mubaloo data")
+//
+//            }
+//        }
     }
 
     func reloadDataSourceDataWithForceReload(forceReload: Bool, completionHandler: Bool -> Void) {
