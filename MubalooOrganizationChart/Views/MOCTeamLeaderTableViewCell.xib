@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamLeaderCell" rowHeight="239" id="KGk-i7-Jjw" customClass="MOCTeamLeaderTableViewCell" customModule="MubalooOrganizationChart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="239"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="321" height="238.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Leader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zP-rx-8N5">
+                        <rect key="frame" x="111" y="20" width="99" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eYr-bU-FhQ">
+                        <rect key="frame" x="109" y="53" width="102" height="102"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="102" id="53L-lV-Md5"/>
+                            <constraint firstAttribute="height" constant="102" id="A4t-KE-pCu"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP4-9r-6yY">
+                        <rect key="frame" x="14" y="161" width="293" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="LP4-9r-6yY" secondAttribute="trailing" constant="6" id="2YK-8a-ZQf"/>
+                    <constraint firstItem="8zP-rx-8N5" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="6BS-Ri-w3p"/>
+                    <constraint firstItem="eYr-bU-FhQ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="H0P-5q-4sY"/>
+                    <constraint firstItem="eYr-bU-FhQ" firstAttribute="leading" secondItem="8zP-rx-8N5" secondAttribute="leading" constant="12" id="KPb-NM-mA5"/>
+                    <constraint firstItem="LP4-9r-6yY" firstAttribute="top" secondItem="eYr-bU-FhQ" secondAttribute="bottom" constant="6" id="RT4-0O-c9f"/>
+                    <constraint firstItem="8zP-rx-8N5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="Sxd-up-U8r"/>
+                    <constraint firstItem="eYr-bU-FhQ" firstAttribute="top" secondItem="8zP-rx-8N5" secondAttribute="bottom" constant="12" id="THJ-yT-igs"/>
+                    <constraint firstItem="LP4-9r-6yY" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="kL3-Hs-9bk"/>
+                    <constraint firstItem="LP4-9r-6yY" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ntZ-kQ-E8a"/>
+                    <constraint firstItem="LP4-9r-6yY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="pbU-hY-Gmm"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="KPb-NM-mA5"/>
+                        <exclude reference="ntZ-kQ-E8a"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="teamLeaderImageView" destination="eYr-bU-FhQ" id="X5t-er-m8E"/>
+                <outlet property="teamLeaderName" destination="LP4-9r-6yY" id="zOb-B9-C1c"/>
+            </connections>
+            <point key="canvasLocation" x="228.5" y="347.5"/>
+        </tableViewCell>
+    </objects>
+</document>

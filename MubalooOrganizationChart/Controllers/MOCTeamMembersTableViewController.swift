@@ -35,6 +35,8 @@ class MOCTeamMembersTableViewController: UITableViewController {
         }
 
         tableView.registerNib(UINib(nibName: "MOCTeamMemberTableViewCell", bundle: nil), forCellReuseIdentifier: MOCTeamMemberTableViewCell.cellIdentifier)
+
+        tableView.registerNib(UINib(nibName: "MOCTeamLeaderTableViewCell", bundle: nil), forCellReuseIdentifier: MOCTeamLeaderTableViewCell.cellIdentifier)
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -59,13 +61,12 @@ class MOCTeamMembersTableViewController: UITableViewController {
 
         if indexPath.section == 0 {
 
-            let cell = tableView.dequeueReusableCellWithIdentifier(MOCTeamMemberTableViewCell.cellIdentifier, forIndexPath: indexPath) as! MOCTeamMemberTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(MOCTeamLeaderTableViewCell.cellIdentifier, forIndexPath: indexPath) as! MOCTeamLeaderTableViewCell
 
             let teamLead = teamData?.getTeamLeader()
 
-            cell.nameLabel?.text = teamLead?.getTeamMemberFullName()
-            cell.roleLabel?.text = teamLead?.getTeamMemberRole()
-            cell.teamMemberImageView.kf_setImageWithURL(NSURL(string: (teamLead?.profileImageUrl)!))
+            cell.teamLeaderName?.text = teamLead?.getTeamMemberFullName()
+            cell.teamLeaderImageView.kf_setImageWithURL(NSURL(string: (teamLead?.profileImageUrl)!))
 
             return cell
 
@@ -92,7 +93,7 @@ class MOCTeamMembersTableViewController: UITableViewController {
 
         if indexPath.section == 0 {
 
-            return 176
+            return 196
 
         } else {
 
