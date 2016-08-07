@@ -73,14 +73,11 @@ class MOCTeamsTableViewController: UITableViewController {
             splitViewController?.showDetailViewController(teamMembersTableViewController.navigationController!, sender: nil)
 
         }
-        
-        UIView.animateWithDuration(0.3, animations: {
+
+        UIView.animateWithDuration(0.3) {
 
             self.splitViewController?.preferredDisplayMode = .PrimaryHidden
 
-            }) { _ in
-
-            self.splitViewController?.preferredDisplayMode = .Automatic
         }
     }
 }
