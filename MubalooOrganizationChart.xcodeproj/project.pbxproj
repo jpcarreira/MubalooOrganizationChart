@@ -20,11 +20,11 @@
 		62D29DD11D5630D200A98C0F /* MOCTeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DCF1D5630D200A98C0F /* MOCTeamMember.swift */; };
 		62D29DD31D56393400A98C0F /* MOCTeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DD21D56393400A98C0F /* MOCTeamsTableViewController.swift */; };
 		62D29DD51D56539E00A98C0F /* MOCTeamMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DD41D56539E00A98C0F /* MOCTeamMembersTableViewController.swift */; };
-		62D29DDA1D577BF700A98C0F /* MOCTeamMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DD81D577BF700A98C0F /* MOCTeamMemberTableViewCell.swift */; };
-		62D29DDB1D577BF700A98C0F /* MOCTeamMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D29DD91D577BF700A98C0F /* MOCTeamMemberTableViewCell.xib */; };
 		62D29DDD1D579BEB00A98C0F /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D29DDC1D579BEB00A98C0F /* Kingfisher.framework */; };
-		62D29DE01D57A86A00A98C0F /* MOCTeamLeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DDE1D57A86A00A98C0F /* MOCTeamLeaderTableViewCell.swift */; };
-		62D29DE11D57A86A00A98C0F /* MOCTeamLeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D29DDF1D57A86A00A98C0F /* MOCTeamLeaderTableViewCell.xib */; };
+		62D29DEF1D57ABA800A98C0F /* MOCTeamLeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DED1D57ABA800A98C0F /* MOCTeamLeaderTableViewCell.swift */; };
+		62D29DF01D57ABA800A98C0F /* MOCTeamLeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D29DEE1D57ABA800A98C0F /* MOCTeamLeaderTableViewCell.xib */; };
+		62D29DF31D57ABB300A98C0F /* MOCTeamMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DF11D57ABB300A98C0F /* MOCTeamMemberTableViewCell.swift */; };
+		62D29DF41D57ABB300A98C0F /* MOCTeamMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D29DF21D57ABB300A98C0F /* MOCTeamMemberTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,11 +43,11 @@
 		62D29DCF1D5630D200A98C0F /* MOCTeamMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMember.swift; path = Models/Entitities/MOCTeamMember.swift; sourceTree = "<group>"; };
 		62D29DD21D56393400A98C0F /* MOCTeamsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamsTableViewController.swift; path = Controllers/MOCTeamsTableViewController.swift; sourceTree = "<group>"; };
 		62D29DD41D56539E00A98C0F /* MOCTeamMembersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMembersTableViewController.swift; path = Controllers/MOCTeamMembersTableViewController.swift; sourceTree = "<group>"; };
-		62D29DD81D577BF700A98C0F /* MOCTeamMemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMemberTableViewCell.swift; path = Views/MOCTeamMemberTableViewCell.swift; sourceTree = "<group>"; };
-		62D29DD91D577BF700A98C0F /* MOCTeamMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MOCTeamMemberTableViewCell.xib; path = Views/MOCTeamMemberTableViewCell.xib; sourceTree = "<group>"; };
 		62D29DDC1D579BEB00A98C0F /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		62D29DDE1D57A86A00A98C0F /* MOCTeamLeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamLeaderTableViewCell.swift; path = Views/MOCTeamLeaderTableViewCell.swift; sourceTree = "<group>"; };
-		62D29DDF1D57A86A00A98C0F /* MOCTeamLeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MOCTeamLeaderTableViewCell.xib; path = Views/MOCTeamLeaderTableViewCell.xib; sourceTree = "<group>"; };
+		62D29DED1D57ABA800A98C0F /* MOCTeamLeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamLeaderTableViewCell.swift; path = Views/CustomViews/TeamLeaderTableViewCell/MOCTeamLeaderTableViewCell.swift; sourceTree = "<group>"; };
+		62D29DEE1D57ABA800A98C0F /* MOCTeamLeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MOCTeamLeaderTableViewCell.xib; path = Views/CustomViews/TeamLeaderTableViewCell/MOCTeamLeaderTableViewCell.xib; sourceTree = "<group>"; };
+		62D29DF11D57ABB300A98C0F /* MOCTeamMemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMemberTableViewCell.swift; path = Views/CustomViews/TeamMemberTableViewCell/MOCTeamMemberTableViewCell.swift; sourceTree = "<group>"; };
+		62D29DF21D57ABB300A98C0F /* MOCTeamMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MOCTeamMemberTableViewCell.xib; path = Views/CustomViews/TeamMemberTableViewCell/MOCTeamMemberTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +105,9 @@
 		62D24D381D54A12D00A5AD08 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				62D29DE21D57AB4E00A98C0F /* CustomViews */,
 				62D24D3E1D54A19500A5AD08 /* Main.storyboard */,
 				62D24D3C1D54A19500A5AD08 /* LaunchScreen.storyboard */,
-				62D29DD81D577BF700A98C0F /* MOCTeamMemberTableViewCell.swift */,
-				62D29DD91D577BF700A98C0F /* MOCTeamMemberTableViewCell.xib */,
-				62D29DDE1D57A86A00A98C0F /* MOCTeamLeaderTableViewCell.swift */,
-				62D29DDF1D57A86A00A98C0F /* MOCTeamLeaderTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -185,6 +182,33 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
+		62D29DE21D57AB4E00A98C0F /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				62D29DEB1D57AB8800A98C0F /* TeamLeaderTableViewCell */,
+				62D29DEC1D57AB9200A98C0F /* TeamMemberTableViewCell */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		62D29DEB1D57AB8800A98C0F /* TeamLeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				62D29DED1D57ABA800A98C0F /* MOCTeamLeaderTableViewCell.swift */,
+				62D29DEE1D57ABA800A98C0F /* MOCTeamLeaderTableViewCell.xib */,
+			);
+			name = TeamLeaderTableViewCell;
+			sourceTree = "<group>";
+		};
+		62D29DEC1D57AB9200A98C0F /* TeamMemberTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				62D29DF11D57ABB300A98C0F /* MOCTeamMemberTableViewCell.swift */,
+				62D29DF21D57ABB300A98C0F /* MOCTeamMemberTableViewCell.xib */,
+			);
+			name = TeamMemberTableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,11 +268,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62D29DDB1D577BF700A98C0F /* MOCTeamMemberTableViewCell.xib in Resources */,
+				62D29DF41D57ABB300A98C0F /* MOCTeamMemberTableViewCell.xib in Resources */,
 				62D24D411D54A19500A5AD08 /* Main.storyboard in Resources */,
+				62D29DF01D57ABA800A98C0F /* MOCTeamLeaderTableViewCell.xib in Resources */,
 				62D24D451D54A1E300A5AD08 /* Assets.xcassets in Resources */,
 				62D24D401D54A19500A5AD08 /* LaunchScreen.storyboard in Resources */,
-				62D29DE11D57A86A00A98C0F /* MOCTeamLeaderTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,16 +301,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62D29DDA1D577BF700A98C0F /* MOCTeamMemberTableViewCell.swift in Sources */,
 				62D29DD01D5630D200A98C0F /* MOCTeam.swift in Sources */,
 				62D29DB71D54D5AB00A98C0F /* JCNetworkError.swift in Sources */,
 				62D29DCC1D55449900A98C0F /* MOCMubalooDataSource.swift in Sources */,
 				62D29DD11D5630D200A98C0F /* MOCTeamMember.swift in Sources */,
+				62D29DF31D57ABB300A98C0F /* MOCTeamMemberTableViewCell.swift in Sources */,
 				62D29DD31D56393400A98C0F /* MOCTeamsTableViewController.swift in Sources */,
-				62D29DE01D57A86A00A98C0F /* MOCTeamLeaderTableViewCell.swift in Sources */,
 				62D29DB81D54D5AB00A98C0F /* JCNetworkWrapper.swift in Sources */,
 				62D29DC41D553ACA00A98C0F /* AppDelegate.swift in Sources */,
 				62D29DB41D54D5A200A98C0F /* Reachability.swift in Sources */,
+				62D29DEF1D57ABA800A98C0F /* MOCTeamLeaderTableViewCell.swift in Sources */,
 				62D29DD51D56539E00A98C0F /* MOCTeamMembersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
