@@ -20,6 +20,8 @@
 		62D29DD11D5630D200A98C0F /* MOCTeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DCF1D5630D200A98C0F /* MOCTeamMember.swift */; };
 		62D29DD31D56393400A98C0F /* MOCTeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DD21D56393400A98C0F /* MOCTeamsTableViewController.swift */; };
 		62D29DD51D56539E00A98C0F /* MOCTeamMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DD41D56539E00A98C0F /* MOCTeamMembersTableViewController.swift */; };
+		62D29DDA1D577BF700A98C0F /* MOCTeamMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DD81D577BF700A98C0F /* MOCTeamMemberTableViewCell.swift */; };
+		62D29DDB1D577BF700A98C0F /* MOCTeamMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D29DD91D577BF700A98C0F /* MOCTeamMemberTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		62D29DCF1D5630D200A98C0F /* MOCTeamMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMember.swift; path = Models/Entitities/MOCTeamMember.swift; sourceTree = "<group>"; };
 		62D29DD21D56393400A98C0F /* MOCTeamsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamsTableViewController.swift; path = Controllers/MOCTeamsTableViewController.swift; sourceTree = "<group>"; };
 		62D29DD41D56539E00A98C0F /* MOCTeamMembersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMembersTableViewController.swift; path = Controllers/MOCTeamMembersTableViewController.swift; sourceTree = "<group>"; };
+		62D29DD81D577BF700A98C0F /* MOCTeamMemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMemberTableViewCell.swift; path = Views/MOCTeamMemberTableViewCell.swift; sourceTree = "<group>"; };
+		62D29DD91D577BF700A98C0F /* MOCTeamMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MOCTeamMemberTableViewCell.xib; path = Views/MOCTeamMemberTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				62D24D3E1D54A19500A5AD08 /* Main.storyboard */,
 				62D24D3C1D54A19500A5AD08 /* LaunchScreen.storyboard */,
+				62D29DD81D577BF700A98C0F /* MOCTeamMemberTableViewCell.swift */,
+				62D29DD91D577BF700A98C0F /* MOCTeamMemberTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -228,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D29DDB1D577BF700A98C0F /* MOCTeamMemberTableViewCell.xib in Resources */,
 				62D24D411D54A19500A5AD08 /* Main.storyboard in Resources */,
 				62D24D451D54A1E300A5AD08 /* Assets.xcassets in Resources */,
 				62D24D401D54A19500A5AD08 /* LaunchScreen.storyboard in Resources */,
@@ -258,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D29DDA1D577BF700A98C0F /* MOCTeamMemberTableViewCell.swift in Sources */,
 				62D29DD01D5630D200A98C0F /* MOCTeam.swift in Sources */,
 				62D29DB71D54D5AB00A98C0F /* JCNetworkError.swift in Sources */,
 				62D29DCC1D55449900A98C0F /* MOCMubalooDataSource.swift in Sources */,

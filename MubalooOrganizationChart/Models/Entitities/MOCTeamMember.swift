@@ -44,4 +44,9 @@ struct MOCTeamMember: Decodable {
         return firstName! + " " + lastName!
 
     }
+
+    func getTeamMemberRole() -> String {
+
+        return role!
+    }
 }

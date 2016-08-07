@@ -27,6 +27,8 @@ class MOCTeamMembersTableViewController: UITableViewController {
 
             teamData = MOCMubalooDataSource.singleton.teamAtIndex(0)
         }
+
+        tableView.registerNib(UINib(nibName: "MOCTeamMemberTableViewCell", bundle: nil), forCellReuseIdentifier: MOCTeamMemberTableViewCell.cellIdentifier)
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -43,13 +45,20 @@ class MOCTeamMembersTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCellWithIdentifier("TeamMemberCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(MOCTeamMemberTableViewCell.cellIdentifier, forIndexPath: indexPath) as! MOCTeamMemberTableViewCell
 
         let teamMember = teamData?.teamMemberAtIndex(indexPath.row)
         
-        cell.textLabel?.text = teamMember?.getTeamMemberFullName()
+        cell.nameLabel?.text = teamMember?.getTeamMemberFullName()
+        cell.roleLabel?.text = teamMember?.getTeamMemberRole()
 
         return cell
+
+    }
+
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+
+        return 88.0
 
     }
 }
