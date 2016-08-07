@@ -37,7 +37,6 @@ final class MOCMubalooDataSource: NSObject {
 
             }
         }
-
     }
 
     func reloadDataSourceDataWithForceReload(forceReload: Bool, completionHandler: Bool -> Void) {
@@ -79,6 +78,7 @@ final class MOCMubalooDataSource: NSObject {
     func numberOfTeams() -> Int? {
 
         return mubalooTeams?.count
+
     }
 
     func teamNameAtIndex(index: Int) -> String? {
@@ -90,6 +90,7 @@ final class MOCMubalooDataSource: NSObject {
         }
 
         return nil
+
     }
 
     func teamAtIndex(index: Int) -> MOCTeam? {
@@ -110,8 +111,6 @@ final class MOCMubalooDataSource: NSObject {
 
                     for mubalooEntry in mubalooData {
 
-//                        print(mubalooEntry)
-
                         guard let teamData = MOCTeam(json: mubalooEntry as! Dictionary<String, AnyObject>) else {
 
                             print("MOCMubalooDataSource: error getting team data")
@@ -122,6 +121,7 @@ final class MOCMubalooDataSource: NSObject {
                         }
 
                         // if we're able to parse the teamData object then we have a team and add it to our data source object
+
                         if let _ = teamData.teamName {
 
                             self.mubalooTeams?.append(teamData)
