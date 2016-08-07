@@ -8,10 +8,21 @@
 
 import UIKit
 
+/**
+ *  protocol to establish communication between the masterVC (this) and the detailVC (TeamMembersTableVC)
+ */
+protocol MOCTeamSelectionDelegate: class {
+
+    func teamSelected(team: MOCTeam)
+
+}
+
 class MOCTeamsTableViewController: UITableViewController {
 
     // a reference to our data source
     private var mubalooDataSource: MOCMubalooDataSource
+
+    weak var delegate: MOCTeamSelectionDelegate?
 
     required init?(coder aDecoder: NSCoder) {
 
@@ -40,5 +51,20 @@ class MOCTeamsTableViewController: UITableViewController {
 
         return cell
 
+    }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+        let team = mubalooDataSource.teamAtIndex(indexPath.row)
+
+        if let team = team {
+
+            delegate?.teamSelected(team)
+
+        } else {
+
+            // TODO
+
+        }
     }
 }

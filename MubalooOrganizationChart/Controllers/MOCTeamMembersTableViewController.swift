@@ -19,15 +19,6 @@ class MOCTeamMembersTableViewController: UITableViewController {
         }
     }
 
-    override func viewDidLoad() {
-
-        super.viewDidLoad()
-
-        // TODO: test only
-        teamData = MOCMubalooDataSource.singleton.teamAtIndex(0)
-        
-    }
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 
         return 1
@@ -50,5 +41,13 @@ class MOCTeamMembersTableViewController: UITableViewController {
 
         return cell
 
+    }
+}
+
+extension MOCTeamMembersTableViewController: MOCTeamSelectionDelegate {
+
+    func teamSelected(team: MOCTeam) {
+
+        teamData = team
     }
 }
