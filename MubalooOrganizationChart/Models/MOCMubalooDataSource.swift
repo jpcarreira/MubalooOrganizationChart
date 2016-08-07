@@ -24,19 +24,7 @@ final class MOCMubalooDataSource: NSObject {
         super.init()
 
         mubalooTeams = Array()
-
-//        getMubalooData { success in
-//
-//            if success {
-//
-//                print("MOCMubalooDataSource: singeton initialized with mubaloo data")
-//
-//            } else {
-//
-//                print("MOCMubalooDataSource: singletion initialzied without mubaloo data")
-//
-//            }
-//        }
+        
     }
 
     func reloadDataSourceDataWithForceReload(forceReload: Bool, completionHandler: Bool -> Void) {
@@ -65,12 +53,16 @@ final class MOCMubalooDataSource: NSObject {
             } else {
                 
                 print("MOCMubalooDataSource: data reload NOK due to no internet connection")
+
+                completionHandler(false)
                 
             }
 
         } else {
 
             print("MOCMubalooDataSource: no need to reload, data already cached")
+
+            completionHandler(true)
 
         }
     }

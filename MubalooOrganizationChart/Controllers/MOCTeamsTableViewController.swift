@@ -28,7 +28,7 @@ class MOCTeamsTableViewController: UITableViewController {
 
         mubalooDataSource = MOCMubalooDataSource.singleton
 
-        mubalooDataSource.reloadDataSourceDataWithForceReload(true) { success in
+        mubalooDataSource.reloadDataSourceDataWithForceReload(false) { success in
 
             if success {
 
@@ -37,7 +37,7 @@ class MOCTeamsTableViewController: UITableViewController {
             } else {
 
                 print("MOCTeamsTableViewController: singletion initialzied without mubaloo data")
-
+                
             }
         }
 
