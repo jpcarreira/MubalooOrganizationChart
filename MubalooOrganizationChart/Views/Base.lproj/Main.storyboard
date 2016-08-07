@@ -43,7 +43,7 @@
             </objects>
             <point key="canvasLocation" x="1078" y="908"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Team Listing-->
         <scene sceneID="JYN-H8-Bxh">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="dq5-86-g4z" customClass="MOCTeamsTableViewController" customModule="MubalooOrganizationChart" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +75,7 @@
                             <outlet property="delegate" destination="dq5-86-g4z" id="Gw4-TB-XTE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="iJw-yE-1U1"/>
+                    <navigationItem key="navigationItem" title="Team Listing" id="iJw-yE-1U1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jR-mn-tFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
