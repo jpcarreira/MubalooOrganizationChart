@@ -27,6 +27,7 @@
 		62D29DF41D57ABB300A98C0F /* MOCTeamMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D29DF21D57ABB300A98C0F /* MOCTeamMemberTableViewCell.xib */; };
 		62D29DFC1D57ACE100A98C0F /* JCSimplePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DFB1D57ACE100A98C0F /* JCSimplePresentationController.swift */; };
 		62D29DFF1D57AD1200A98C0F /* JCSimpleTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DFE1D57AD1200A98C0F /* JCSimpleTransitioner.swift */; };
+		62D29E011D57AEB700A98C0F /* MOCTeamMemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29E001D57AEB700A98C0F /* MOCTeamMemberDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		62D29DF21D57ABB300A98C0F /* MOCTeamMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MOCTeamMemberTableViewCell.xib; path = Views/CustomViews/TeamMemberTableViewCell/MOCTeamMemberTableViewCell.xib; sourceTree = "<group>"; };
 		62D29DFB1D57ACE100A98C0F /* JCSimplePresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCSimplePresentationController.swift; path = Helpers/PresentationWrapper/PresentationControllers/JCSimplePresentationController.swift; sourceTree = "<group>"; };
 		62D29DFE1D57AD1200A98C0F /* JCSimpleTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCSimpleTransitioner.swift; path = Helpers/PresentationWrapper/Transitioners/JCSimpleTransitioner.swift; sourceTree = "<group>"; };
+		62D29E001D57AEB700A98C0F /* MOCTeamMemberDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMemberDetailViewController.swift; path = Controllers/MOCTeamMemberDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				62D29DD21D56393400A98C0F /* MOCTeamsTableViewController.swift */,
 				62D29DD41D56539E00A98C0F /* MOCTeamMembersTableViewController.swift */,
+				62D29E001D57AEB700A98C0F /* MOCTeamMemberDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				62D29DB71D54D5AB00A98C0F /* JCNetworkError.swift in Sources */,
 				62D29DFF1D57AD1200A98C0F /* JCSimpleTransitioner.swift in Sources */,
 				62D29DFC1D57ACE100A98C0F /* JCSimplePresentationController.swift in Sources */,
+				62D29E011D57AEB700A98C0F /* MOCTeamMemberDetailViewController.swift in Sources */,
 				62D29DCC1D55449900A98C0F /* MOCMubalooDataSource.swift in Sources */,
 				62D29DD11D5630D200A98C0F /* MOCTeamMember.swift in Sources */,
 				62D29DF31D57ABB300A98C0F /* MOCTeamMemberTableViewCell.swift in Sources */,

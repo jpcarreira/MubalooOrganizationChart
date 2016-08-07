@@ -25,6 +25,8 @@ class MOCTeamMembersTableViewController: UITableViewController {
         return teamData?.getTeamWithoutLeader()
     }
 
+    let simpleTransitionDelegate = JCSimpleTransitioningDelegate()
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -100,6 +102,45 @@ class MOCTeamMembersTableViewController: UITableViewController {
             return 88.0
 
         }
+    }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+        transitioningDelegate = simpleTransitionDelegate
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+        let teamMemberDetailViewController = storyboard.instantiateViewControllerWithIdentifier(MOCTeamMemberDetailViewController.viewControllerIdentifier) as! MOCTeamMemberDetailViewController
+
+        _ = teamMemberDetailViewController.view
+
+        teamMemberDetailViewController.transitioningDelegate = simpleTransitionDelegate
+
+        teamMemberDetailViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+
+        let teamMember: MOCTeamMember?
+
+        if indexPath.section == 0 {
+
+            teamMember = teamData?.getTeamLeader()
+
+        } else {
+
+            teamMember = teamWithoutLeader?[indexPath.row]
+
+        }
+
+        if let teamMember = teamMember {
+
+            teamMemberDetailViewController.nameLabel.text = teamMember.getTeamMemberFullName()
+
+            teamMemberDetailViewController.roleLabel.text = teamMember.getTeamMemberRole()
+
+            teamMemberDetailViewController.teamMemberImageView.kf_setImageWithURL(NSURL(string: (teamMember.profileImageUrl)!))
+
+        }
+
+        presentViewController(teamMemberDetailViewController, animated: true, completion: nil)
     }
 }
 

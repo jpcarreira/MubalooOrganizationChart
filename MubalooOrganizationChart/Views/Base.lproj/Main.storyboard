@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Team Members Table View Controller-->
@@ -23,6 +24,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWe-gv-s5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1078" y="908"/>
+        </scene>
+        <!--Team Member Detail View Controller-->
+        <scene sceneID="Tcm-bs-je2">
+            <objects>
+                <viewController storyboardIdentifier="TeamMemberDetail" id="1G3-E4-Jpg" customClass="MOCTeamMemberDetailViewController" customModule="MubalooOrganizationChart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9cb-Ua-GB3"/>
+                        <viewControllerLayoutGuide type="bottom" id="nGQ-hp-Qim"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pZA-pA-EAp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7q6-EC-ihe">
+                                <rect key="frame" x="240" y="12" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="1cy-8H-xhs"/>
+                                    <constraint firstAttribute="height" constant="120" id="L9q-ju-rhE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xob-pb-0BE">
+                                <rect key="frame" x="277" y="144" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Role" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvE-kK-MHW">
+                                <rect key="frame" x="283" y="177" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="co3-Oy-qYX">
+                                <rect key="frame" x="273" y="222" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissButtonIsPressed:" destination="1G3-E4-Jpg" eventType="touchUpInside" id="wyu-Jj-li3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FvE-kK-MHW" firstAttribute="centerX" secondItem="pZA-pA-EAp" secondAttribute="centerX" id="3lX-fj-pZn"/>
+                            <constraint firstItem="FvE-kK-MHW" firstAttribute="top" secondItem="Xob-pb-0BE" secondAttribute="bottom" constant="12" id="9E6-yt-8cs"/>
+                            <constraint firstItem="co3-Oy-qYX" firstAttribute="top" secondItem="FvE-kK-MHW" secondAttribute="bottom" constant="24" id="A1d-qF-MAR"/>
+                            <constraint firstItem="Xob-pb-0BE" firstAttribute="centerX" secondItem="pZA-pA-EAp" secondAttribute="centerX" id="EjJ-Gh-CMJ"/>
+                            <constraint firstItem="7q6-EC-ihe" firstAttribute="top" secondItem="pZA-pA-EAp" secondAttribute="topMargin" constant="12" id="Gwb-VX-hPr"/>
+                            <constraint firstItem="Xob-pb-0BE" firstAttribute="top" secondItem="7q6-EC-ihe" secondAttribute="bottom" constant="12" id="ZpF-MO-Bvt"/>
+                            <constraint firstItem="7q6-EC-ihe" firstAttribute="centerX" secondItem="pZA-pA-EAp" secondAttribute="centerX" id="cl3-Mb-C3W"/>
+                            <constraint firstItem="co3-Oy-qYX" firstAttribute="centerX" secondItem="pZA-pA-EAp" secondAttribute="centerX" id="mvU-Cp-5Qx"/>
+                            <constraint firstItem="Xob-pb-0BE" firstAttribute="leading" secondItem="7q6-EC-ihe" secondAttribute="leading" constant="12" id="pdf-BF-8L0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pdf-BF-8L0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="Xob-pb-0BE" id="deE-Jg-ra2"/>
+                        <outlet property="roleLabel" destination="FvE-kK-MHW" id="Xis-rb-UOC"/>
+                        <outlet property="teamMemberImageView" destination="7q6-EC-ihe" id="qIg-4g-Kie"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7u-xb-ZDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="1734"/>
         </scene>
         <!--Team Listing-->
         <scene sceneID="JYN-H8-Bxh">
