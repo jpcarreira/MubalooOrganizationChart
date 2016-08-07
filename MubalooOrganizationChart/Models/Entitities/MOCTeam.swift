@@ -28,4 +28,46 @@ struct MOCTeam: Decodable {
         return teamMembers?[index]
         
     }
+
+    func getTeamLeader() -> MOCTeamMember? {
+
+        if let allTeamMembers = teamMembers {
+
+            for teamMember in allTeamMembers {
+
+                if teamMember.isTeamLead == true {
+
+                    return teamMember
+
+                }
+            }
+
+            return nil
+        }
+
+        return nil
+    }
+
+    func getTeamWithoutLeader() -> [MOCTeamMember] {
+
+        var team = [MOCTeamMember]()
+
+        if let allTeamMembers = teamMembers {
+
+            for teamMember in allTeamMembers {
+
+                if teamMember.isTeamLead == true {
+
+                    continue
+
+                } else {
+
+                    team.append(teamMember)
+
+                }
+            }
+        }
+
+        return team
+    }
 }

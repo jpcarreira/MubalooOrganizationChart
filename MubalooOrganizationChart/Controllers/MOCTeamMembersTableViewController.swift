@@ -20,6 +20,11 @@ class MOCTeamMembersTableViewController: UITableViewController {
         }
     }
 
+    var teamWithoutLeader: [MOCTeamMember]? {
+
+        return teamData?.getTeamWithoutLeader()
+    }
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -34,34 +39,66 @@ class MOCTeamMembersTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 
-        return 1
+        return 2
 
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return teamData?.teamMembers?.count ?? 0
+        if section == 0 {
 
+            return 1
+
+        } else {
+
+            return teamWithoutLeader?.count ?? 0
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCellWithIdentifier(MOCTeamMemberTableViewCell.cellIdentifier, forIndexPath: indexPath) as! MOCTeamMemberTableViewCell
+        if indexPath.section == 0 {
 
-        let teamMember = teamData?.teamMemberAtIndex(indexPath.row)
-        
-        cell.nameLabel?.text = teamMember?.getTeamMemberFullName()
-        cell.roleLabel?.text = teamMember?.getTeamMemberRole()
-        cell.teamMemberImageView.kf_setImageWithURL(NSURL(string: (teamMember?.profileImageUrl)!))
+            let cell = tableView.dequeueReusableCellWithIdentifier(MOCTeamMemberTableViewCell.cellIdentifier, forIndexPath: indexPath) as! MOCTeamMemberTableViewCell
 
-        return cell
+            let teamLead = teamData?.getTeamLeader()
 
+            cell.nameLabel?.text = teamLead?.getTeamMemberFullName()
+            cell.roleLabel?.text = teamLead?.getTeamMemberRole()
+            cell.teamMemberImageView.kf_setImageWithURL(NSURL(string: (teamLead?.profileImageUrl)!))
+
+            return cell
+
+        } else {
+
+            let cell = tableView.dequeueReusableCellWithIdentifier(MOCTeamMemberTableViewCell.cellIdentifier, forIndexPath: indexPath) as! MOCTeamMemberTableViewCell
+
+            let teamMember = teamWithoutLeader?[indexPath.row]
+
+            if let teamMember = teamMember {
+
+                cell.nameLabel?.text = teamMember.getTeamMemberFullName()
+                cell.roleLabel?.text = teamMember.getTeamMemberRole()
+                cell.teamMemberImageView.kf_setImageWithURL(NSURL(string: (teamMember.profileImageUrl)!))
+
+            }
+
+            return cell
+
+        }
     }
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 
-        return 88.0
+        if indexPath.section == 0 {
 
+            return 176
+
+        } else {
+
+            return 88.0
+
+        }
     }
 }
 
