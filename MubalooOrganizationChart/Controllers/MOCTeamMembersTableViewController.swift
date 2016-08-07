@@ -31,10 +31,12 @@ class MOCTeamMembersTableViewController: UITableViewController {
 
         super.viewDidLoad()
 
-        if teamData == nil {
+        // when the app first launches, the data fetch from the server is probably still running in another thread
+        // meaning teamData is likely nil and we won't have data to populate this VC
+        // therefore we register to listen for this notification in order to reload the table view once the data
+        // is received from the server
 
-            teamData = MOCMubalooDataSource.singleton.teamAtIndex(0)
-        }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MOCTeamMembersTableViewController.dataSourceUpdated), name: MOCMubalooDataSource.mubalooDataSuccessfullyUpdatedNotificationName, object: nil)
 
         tableView.registerNib(UINib(nibName: "MOCTeamMemberTableViewCell", bundle: nil), forCellReuseIdentifier: MOCTeamMemberTableViewCell.cellIdentifier)
 
@@ -67,11 +69,15 @@ class MOCTeamMembersTableViewController: UITableViewController {
 
             let teamLead = teamData?.getTeamLeader()
 
-            cell.teamLeaderName?.text = teamLead?.getTeamMemberFullName()
+            if let teamLead = teamLead {
 
-            cell.teamLeaderImageView.kf_setImageWithURL(NSURL(string: (teamLead?.profileImageUrl)!))
+                cell.teamLeaderName?.text = teamLead.getTeamMemberFullName()
 
-            cell.teamLeaderRole?.text = teamLead?.getTeamMemberRole()
+                cell.teamLeaderImageView.kf_setImageWithURL(NSURL(string: (teamLead.profileImageUrl)!))
+
+                cell.teamLeaderRole?.text = teamLead.getTeamMemberRole()
+
+            }
 
             return cell
 
@@ -152,5 +158,26 @@ extension MOCTeamMembersTableViewController: MOCTeamSelectionDelegate {
     func teamSelected(team: MOCTeam) {
 
         teamData = team
+    }
+}
+
+extension MOCTeamMembersTableViewController {
+
+    func dataSourceUpdated() {
+
+        // with the data successfully received from the server we can know use the first team to populate this VC 
+        // we check for teamData being nil because this only happens when app is launched for the first time and
+
+        // if we reach this VC by navigating from the masterVC (MOCTeamsTableVC) teamData is never nil and thus 
+        // we don't fill this VC is data from the first team in case the data source gets updated (by calling it
+        // explicatally somewhere else)
+
+        if teamData == nil {
+
+            teamData = MOCMubalooDataSource.singleton.teamAtIndex(0)
+
+            self.tableView.reloadData()
+
+        }
     }
 }

@@ -32,7 +32,7 @@ class MOCTeamsTableViewController: UITableViewController {
 
             if success {
 
-                print("MOCTeamsTableViewController: singeton initialized with mubaloo data")
+                print("MOCTeamsTableViewController: singeton initialized with mubaloo data")    
 
             } else {
 

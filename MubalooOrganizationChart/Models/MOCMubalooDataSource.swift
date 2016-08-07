@@ -15,6 +15,8 @@ final class MOCMubalooDataSource: NSObject {
     private var ceoData: MOCTeamMember?
     private var mubalooTeams: [MOCTeam]?
 
+    static let mubalooDataSuccessfullyUpdatedNotificationName = "MubalooDataSuccessfullyUpdatedNotificationName"
+
     static let singleton = MOCMubalooDataSource()
 
     private override init() {
@@ -38,6 +40,12 @@ final class MOCMubalooDataSource: NSObject {
                     if success {
 
                         print("MOCMubalooDataSource: data reload OK")
+
+                        dispatch_async(dispatch_get_main_queue(), { 
+
+                            NSNotificationCenter.defaultCenter().postNotificationName(MOCMubalooDataSource.mubalooDataSuccessfullyUpdatedNotificationName, object: nil)
+
+                        })
 
                         completionHandler(true)
 
