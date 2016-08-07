@@ -19,6 +19,16 @@ class MOCTeamMembersTableViewController: UITableViewController {
         }
     }
 
+    override func viewDidLoad() {
+
+        super.viewDidLoad()
+
+        if teamData == nil {
+
+            teamData = MOCMubalooDataSource.singleton.teamAtIndex(0)
+        }
+    }
+
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 
         return 1

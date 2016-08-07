@@ -66,5 +66,12 @@ class MOCTeamsTableViewController: UITableViewController {
             // TODO
 
         }
+
+        // this allows the splitVC to work on iPhones
+        if let teamMembersTableViewController = delegate as? MOCTeamMembersTableViewController {
+
+            splitViewController?.showDetailViewController(teamMembersTableViewController, sender: nil)
+
+        }
     }
 }
