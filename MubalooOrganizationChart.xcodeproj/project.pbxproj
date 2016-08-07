@@ -22,6 +22,7 @@
 		62D29DD51D56539E00A98C0F /* MOCTeamMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DD41D56539E00A98C0F /* MOCTeamMembersTableViewController.swift */; };
 		62D29DDA1D577BF700A98C0F /* MOCTeamMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DD81D577BF700A98C0F /* MOCTeamMemberTableViewCell.swift */; };
 		62D29DDB1D577BF700A98C0F /* MOCTeamMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D29DD91D577BF700A98C0F /* MOCTeamMemberTableViewCell.xib */; };
+		62D29DDD1D579BEB00A98C0F /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D29DDC1D579BEB00A98C0F /* Kingfisher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		62D29DD41D56539E00A98C0F /* MOCTeamMembersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMembersTableViewController.swift; path = Controllers/MOCTeamMembersTableViewController.swift; sourceTree = "<group>"; };
 		62D29DD81D577BF700A98C0F /* MOCTeamMemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMemberTableViewCell.swift; path = Views/MOCTeamMemberTableViewCell.swift; sourceTree = "<group>"; };
 		62D29DD91D577BF700A98C0F /* MOCTeamMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MOCTeamMemberTableViewCell.xib; path = Views/MOCTeamMemberTableViewCell.xib; sourceTree = "<group>"; };
+		62D29DDC1D579BEB00A98C0F /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D29DDD1D579BEB00A98C0F /* Kingfisher.framework in Frameworks */,
 				62D29DBA1D54E5E600A98C0F /* Gloss.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +156,7 @@
 		62D29DBC1D54E8CB00A98C0F /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				62D29DDC1D579BEB00A98C0F /* Kingfisher.framework */,
 				62D29DB91D54E5E600A98C0F /* Gloss.framework */,
 			);
 			name = Vendor;
@@ -251,6 +255,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Gloss.framework",
+				"$(SRCROOT)//Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputPaths = (
 			);
