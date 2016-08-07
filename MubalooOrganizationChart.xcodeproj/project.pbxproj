@@ -25,6 +25,8 @@
 		62D29DF01D57ABA800A98C0F /* MOCTeamLeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D29DEE1D57ABA800A98C0F /* MOCTeamLeaderTableViewCell.xib */; };
 		62D29DF31D57ABB300A98C0F /* MOCTeamMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DF11D57ABB300A98C0F /* MOCTeamMemberTableViewCell.swift */; };
 		62D29DF41D57ABB300A98C0F /* MOCTeamMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D29DF21D57ABB300A98C0F /* MOCTeamMemberTableViewCell.xib */; };
+		62D29DFC1D57ACE100A98C0F /* JCSimplePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DFB1D57ACE100A98C0F /* JCSimplePresentationController.swift */; };
+		62D29DFF1D57AD1200A98C0F /* JCSimpleTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D29DFE1D57AD1200A98C0F /* JCSimpleTransitioner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		62D29DEE1D57ABA800A98C0F /* MOCTeamLeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MOCTeamLeaderTableViewCell.xib; path = Views/CustomViews/TeamLeaderTableViewCell/MOCTeamLeaderTableViewCell.xib; sourceTree = "<group>"; };
 		62D29DF11D57ABB300A98C0F /* MOCTeamMemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MOCTeamMemberTableViewCell.swift; path = Views/CustomViews/TeamMemberTableViewCell/MOCTeamMemberTableViewCell.swift; sourceTree = "<group>"; };
 		62D29DF21D57ABB300A98C0F /* MOCTeamMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MOCTeamMemberTableViewCell.xib; path = Views/CustomViews/TeamMemberTableViewCell/MOCTeamMemberTableViewCell.xib; sourceTree = "<group>"; };
+		62D29DFB1D57ACE100A98C0F /* JCSimplePresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCSimplePresentationController.swift; path = Helpers/PresentationWrapper/PresentationControllers/JCSimplePresentationController.swift; sourceTree = "<group>"; };
+		62D29DFE1D57AD1200A98C0F /* JCSimpleTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCSimpleTransitioner.swift; path = Helpers/PresentationWrapper/Transitioners/JCSimpleTransitioner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				62D29DB21D54D59000A98C0F /* NetworkWrapper */,
+				62D29DF51D57ACAB00A98C0F /* PresentationWrapper */,
 				62D29DB11D54D58900A98C0F /* Reachability */,
 			);
 			name = Helpers;
@@ -207,6 +212,31 @@
 				62D29DF21D57ABB300A98C0F /* MOCTeamMemberTableViewCell.xib */,
 			);
 			name = TeamMemberTableViewCell;
+			sourceTree = "<group>";
+		};
+		62D29DF51D57ACAB00A98C0F /* PresentationWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				62D29DFA1D57ACD000A98C0F /* PresentationControllers */,
+				62D29DFD1D57ACF200A98C0F /* Transititioners */,
+			);
+			name = PresentationWrapper;
+			sourceTree = "<group>";
+		};
+		62D29DFA1D57ACD000A98C0F /* PresentationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				62D29DFB1D57ACE100A98C0F /* JCSimplePresentationController.swift */,
+			);
+			name = PresentationControllers;
+			sourceTree = "<group>";
+		};
+		62D29DFD1D57ACF200A98C0F /* Transititioners */ = {
+			isa = PBXGroup;
+			children = (
+				62D29DFE1D57AD1200A98C0F /* JCSimpleTransitioner.swift */,
+			);
+			name = Transititioners;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +333,8 @@
 			files = (
 				62D29DD01D5630D200A98C0F /* MOCTeam.swift in Sources */,
 				62D29DB71D54D5AB00A98C0F /* JCNetworkError.swift in Sources */,
+				62D29DFF1D57AD1200A98C0F /* JCSimpleTransitioner.swift in Sources */,
+				62D29DFC1D57ACE100A98C0F /* JCSimplePresentationController.swift in Sources */,
 				62D29DCC1D55449900A98C0F /* MOCMubalooDataSource.swift in Sources */,
 				62D29DD11D5630D200A98C0F /* MOCTeamMember.swift in Sources */,
 				62D29DF31D57ABB300A98C0F /* MOCTeamMemberTableViewCell.swift in Sources */,
