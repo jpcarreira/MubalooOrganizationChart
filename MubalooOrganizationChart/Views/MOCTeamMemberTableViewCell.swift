@@ -14,6 +14,8 @@ class MOCTeamMemberTableViewCell: UITableViewCell {
 
     @IBOutlet weak var roleLabel: UILabel!
 
+    @IBOutlet weak var teamMemberImageView: UIImageView!
+
     static let cellIdentifier = "TeamMemberCell"
 
     override func awakeFromNib() {

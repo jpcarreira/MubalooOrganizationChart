@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MOCTeamMembersTableViewController: UITableViewController {
 
@@ -51,6 +52,7 @@ class MOCTeamMembersTableViewController: UITableViewController {
         
         cell.nameLabel?.text = teamMember?.getTeamMemberFullName()
         cell.roleLabel?.text = teamMember?.getTeamMemberRole()
+        cell.teamMemberImageView.kf_setImageWithURL(NSURL(string: (teamMember?.profileImageUrl)!))
 
         return cell
 

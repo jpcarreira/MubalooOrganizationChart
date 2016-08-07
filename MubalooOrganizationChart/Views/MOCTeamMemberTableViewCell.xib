@@ -49,6 +49,7 @@
             <connections>
                 <outlet property="nameLabel" destination="zKY-Nq-Q1f" id="jda-IW-lay"/>
                 <outlet property="roleLabel" destination="4VE-hG-44p" id="9ql-0A-410"/>
+                <outlet property="teamMemberImageView" destination="byU-sY-oVA" id="JF0-7B-sxL"/>
             </connections>
             <point key="canvasLocation" x="413" y="312"/>
         </tableViewCell>
