@@ -21,7 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let masterViewController = leftNavigationController.topViewController as! MOCTeamsTableViewController
 
-        let detailViewController = splitViewController.viewControllers.last as! MOCTeamMembersTableViewController
+        let rightNavigationController = splitViewController.viewControllers.last as! UINavigationController
+        let detailViewController = rightNavigationController.topViewController as! MOCTeamMembersTableViewController
+        detailViewController.navigationItem.leftItemsSupplementBackButton = true
+        detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
 
         masterViewController.delegate = detailViewController
 
