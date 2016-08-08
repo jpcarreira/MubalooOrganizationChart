@@ -17,6 +17,8 @@ class MOCTeamMembersTableViewController: UITableViewController {
 
             self.tableView.reloadData()
 
+            self.title = String((teamData?.teamName)! + " Team")
+
         }
     }
 
